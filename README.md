@@ -34,7 +34,7 @@ Maintains police officer details and their involvement in investigations.
 
 Links officers, criminals, and cases to keep track of investigations.
 
-## 🛠️ Technologies Used
+##  Technologies Used
 
 * **Database:** MySQL / Oracle
 * **Language:** SQL
@@ -43,7 +43,7 @@ Links officers, criminals, and cases to keep track of investigations.
 
 > Replace the database/tool names above with the exact technologies used in your project.
 
-## 🗃️ Database Concepts Implemented
+##  Database Concepts Implemented
 
 The project demonstrates several important DBMS concepts:
 
@@ -62,7 +62,7 @@ The project demonstrates several important DBMS concepts:
 * Functions
 * Triggers
 
-## 📊 Database Structure
+##  Database Structure
 
 The system consists of multiple interconnected tables such as:
 
