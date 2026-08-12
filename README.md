@@ -2,17 +2,16 @@
 
 A **Database Management System (DBMS) project** designed to efficiently manage and organize crime-related information, including criminal records, cases, complaints, officers, and investigation details.
 
-## Live Demo
-
-🔗 View Live Project
-https://crimerecordmanagementsystem-dbms.onrender.com/
-
-
 ##  Overview
 
 The **Crime Record Management System (CRMS)** provides a centralized database for storing and managing crime records. It allows authorized users to add, update, delete, and retrieve information related to crimes, criminals, police officers, complaints, and cases.
 
 The project demonstrates the practical implementation of **DBMS concepts, SQL queries, relational databases, and CRUD operations**.
+
+## Live Demo
+
+🔗 View Live Project
+https://crimerecordmanagementsystem-dbms.onrender.com/
 
 
 ##  Features
