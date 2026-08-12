@@ -19,7 +19,7 @@ CREATE TABLE police_stations (
 CREATE TABLE officers (
   officer_id    INT AUTO_INCREMENT PRIMARY KEY,
   name          VARCHAR(100) NOT NULL,
-  rank          VARCHAR(50),
+  `rank`        VARCHAR(50),
   badge_number  VARCHAR(20) UNIQUE,
   station_id    INT,
   contact       VARCHAR(15),
@@ -131,7 +131,7 @@ INSERT INTO police_stations (station_name, location, contact) VALUES
 ('Baner PS',        'Baner, Pune',        '020-27290100'),
 ('Viman Nagar PS',  'Viman Nagar, Pune',  '020-26630100');
 
-INSERT INTO officers (name, rank, badge_number, station_id, contact, status) VALUES
+INSERT INTO officers (name, `rank`, badge_number, station_id, contact, status) VALUES
 ('R. Desai',    'Superintendent of Police', 'SP-001', 1, '9876500001', 'ON_DUTY'),
 ('A. Patil',    'Sub-Inspector',            'SI-002', 2, '9876500002', 'ON_DUTY'),
 ('M. Kulkarni', 'Sub-Inspector',            'SI-003', 3, '9876500003', 'ON_DUTY'),
