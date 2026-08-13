@@ -139,20 +139,26 @@ Crime-Record-Management-System/
 ├── README.md
 │
 ├── database/
-│   ├── create_tables.sql
-│   ├── insert_data.sql
-│   └── queries.sql
+│   ├── schema.sql
 │
-├── procedures/
-│   ├── procedures.sql
-│   ├── functions.sql
-│   └── triggers.sql
+├── frontend/
+│   ├── index.html
+│   ├── crimes.html
+│   ├── crimes.html
+│   ├── evidence.html
+│   ├── firs.html
+│   ├── officers.html
+│   └── predicts.html
 │
+├── backend/
+│   ├── server.js
+│   ├── shared.js
+│   ├── package.json
+│   ├── package-lock.json
 └── screenshots/
     └── database-output.png
 ```
 
-> Modify the folder structure according to the actual files in your repository.
 
 ##  Objectives
 
