@@ -48,23 +48,18 @@ Maintains police officer details and their involvement in investigations.
 
 Links officers, criminals, and cases to keep track of investigations.
 
-##  Technologies Used
+##  Tech Stack Used
 
 
 | Layer | Technology |
 |---|---|
 | Frontend | HTML5, CSS3, Vanilla JavaScript |
 | Backend | Node.js, Express.js |
-| Database | MySQL (hosted on Aiven) |
+| Database | MySQL (hosted on Aiven) / Oracle |
 | Deployment | Render (Web Service) |
 | Config | dotenv (environment variables) |
+| Concepts | DBMS, RDBMS, CRUD Operations, Joins, Constraints, Relationships |
 
-* **Database:** MySQL / Oracle
-* **Language:** SQL
-* **Concepts:** DBMS, RDBMS, CRUD Operations, Joins, Constraints, Relationships
-* **Tools:** MySQL Workbench / Oracle SQL Developer
-
-> Replace the database/tool names above with the exact technologies used in your project.
 
 ##  Database Concepts Implemented
 
@@ -100,8 +95,29 @@ Investigation
     ↓
 Police Officer
 ```
+police_stations ─┬─< officers
+                  └─< crimes ─┬─< fir
+                               ├─< evidence
+                               ├─< warrants
+                               └─< crime_criminal >─ criminals ─< warrants
 
 The relationships between these entities help maintain consistency and enable efficient retrieval of crime-related information.
+
+
+## Database Schema 
+The database (crms_db) consists of the following core tables, connected via foreign keys:
+
+police_stations — station details
+officers — linked to police_stations
+criminals — criminal profiles and custody status
+crimes — linked to police_stations
+fir — First Information Reports
+crime_criminal — junction table linking crimes to criminals
+evidence — items linked to crimes
+warrants — arrest warrants linked to criminals
+audit_logs — system activity log
+
+Run schema.sql against your MySQL instance to set up the full database structure.
 
 ## ⚙️ Setup & Installation
 
