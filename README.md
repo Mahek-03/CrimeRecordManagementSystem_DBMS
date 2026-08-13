@@ -26,6 +26,7 @@ The system allows authorized users to:
 * Get basic crime trend predictions
 * Maintain a full audit log of system activity
 
+---
 
 ##  Main Modules
 
@@ -49,6 +50,8 @@ Maintains police officer details and their involvement in investigations.
 
 Links officers, criminals, and cases to keep track of investigations.
 
+---
+
 ##  Tech Stack Used
 
 
@@ -61,6 +64,7 @@ Links officers, criminals, and cases to keep track of investigations.
 | Config | dotenv (environment variables) |
 | Concepts | DBMS, RDBMS, CRUD Operations, Joins, Constraints, Relationships |
 
+---
 
 ##  Database Concepts Implemented
 
@@ -288,6 +292,8 @@ Crime-Record-Management-System/
 * Add crime-location mapping using GIS.
 * Introduce advanced search and filtering.
 * Deploy the system as a cloud-based application.
+
+---
 
 ##  Author
 
