@@ -6,6 +6,7 @@ A full-stack **Crime Record Management System (CRMS)** built as a DBMS project, 
 
 🔗 View Project:- https://crimerecordmanagementsystem-dbms.onrender.com/
 
+---
 
 ##  Overview
 
@@ -158,8 +159,9 @@ The relationships between these entities help maintain consistency and enable ef
 
 Run schema.sql against your MySQL instance to set up the full database structure.
 
+---
 
-## ⚙️ Setup & Installation
+##  Setup & Installation
 
 ### Prerequisites
 - [Node.js](https://nodejs.org/) (v18+ recommended)
@@ -202,7 +204,7 @@ Visit **http://localhost:3000** in your browser.
 
 ---
 
-## 🌐 Deployment
+##  Deployment
 
 This project is deployed on **Render** as a Node.js Web Service, connected to a **MySQL database hosted on Aiven** (since Render's free tier only offers PostgreSQL natively).
 
@@ -210,7 +212,7 @@ Environment variables (`DB_HOST`, `DB_PORT`, `DB_USER`, `DB_PASSWORD`, `DB_NAME`
 
 ---
 
-## 📡 API Overview
+##  API Overview
 
 | Endpoint | Method | Description |
 |---|---|---|
@@ -287,21 +289,15 @@ Crime-Record-Management-System/
 * Introduce advanced search and filtering.
 * Deploy the system as a cloud-based application.
 
-## 👩‍💻 Author
+##  Author
 
-**Mahek** — DBMS Project, Crime Record Management System
+**Mahek Chaurasia** — DBMS Project, Crime Record Management System
 
 ---
 
 ## 📄 License
 
 This project is for academic purposes as part of a DBMS coursework submission.
-
-## Author
-
-**Mahek Chaurasia**
-
-Computer Science Engineering Student
 
 ---
 
