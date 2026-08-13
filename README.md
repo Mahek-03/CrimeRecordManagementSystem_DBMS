@@ -1,6 +1,6 @@
 #  Crime Record Management System (CRMS)
 
-A **Database Management System (DBMS) project** designed to efficiently manage and organize crime-related information, including criminal records, cases, complaints, officers, and investigation details.
+A full-stack **Crime Record Management System (CRMS)** built as a DBMS project, designed to help police departments digitally manage crime records, FIRs, criminal profiles, evidence, officers, and active warrants — all from a single command dashboard.
 
 
 ##  Overview
@@ -12,11 +12,22 @@ The project demonstrates the practical implementation of **DBMS concepts, SQL qu
 
 ## Live Demo
 
-🔗 View Live Project
-https://crimerecordmanagementsystem-dbms.onrender.com/
+🔗 View Project:- https://crimerecordmanagementsystem-dbms.onrender.com/
 
 
 ##  Features
+* Command Dashboard – real-time stats: total crimes, open cases, FIRs filed, cases closed, criminals in custody, active warrants, evidence count
+* Crime Records Management – add, view, update, and delete crime records with status tracking (Open/Closed)
+* FIR Filing System – file and manage First Information Reports with complainant details
+* Criminal Database – maintain criminal profiles with custody status (At Large / In Custody)
+* Evidence Tracking – log and manage evidence items linked to specific crimes
+* Officer Management – directory of officers with station assignments and duty status
+* Warrant Management – issue and revoke arrest warrants
+* Crime Heatmap – visual view of crime hotspots by location
+* Crime Prediction – basic trend-based crime prediction
+*  Logs – tracks system activity for accountability
+* REST API Backend – Express.js + MySQL powering all modules
+* Cloud Deployed – live on Render with a cloud-hosted MySQL (Aiven) database
 
 
 
