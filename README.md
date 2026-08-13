@@ -95,11 +95,85 @@ Investigation
     ↓
 Police Officer
 ```
-police_stations ─┬─< officers
-                  └─< crimes ─┬─< fir
-                               ├─< evidence
-                               ├─< warrants
-                               └─< crime_criminal >─ criminals ─< warrants
+
+
+```
+┌─────────────────────┐
+│   police_stations   │
+│──────────────────────│
+│ PK station_id        │
+│    station_name      │
+│    location          │
+│    contact           │
+└──────────┬───────────┘
+           │
+    ┌──────┴───────┐
+    │              │
+    ▼              ▼
+┌─────────────┐  ┌──────────────────────┐
+│  officers   │  │       crimes         │
+│─────────────│  │───────────────────────│
+│ PK officer_id│  │ PK crime_id           │
+│    name      │  │    crime_type         │
+│   `rank`     │  │    location           │
+│    badge_number│ │    description        │
+│ FK station_id│  │    date               │
+│    contact   │  │    status             │
+│    status    │  │    assigned_officer   │
+└─────────────┘  │ FK station_id         │
+                  └──────────┬────────────┘
+                             │
+        ┌────────────────────┼─────────────────────┐
+        │                    │                      │
+        ▼                    ▼                      ▼
+┌───────────────┐  ┌──────────────────┐   ┌──────────────────┐
+│      fir       │  │     evidence      │   │   crime_criminal  │
+│────────────────│  │───────────────────│   │────────────────────│
+│ PK fir_id      │  │ PK evidence_id     │   │ PK id              │
+│    fir_number  │  │ FK crime_id        │   │ FK crime_id        │
+│    complainant_name│ │    title         │   │ FK criminal_id     │
+│    contact_number│  │    file_type       │   └─────────┬──────────┘
+│    crime_type  │  │    file_path        │             │
+│    incident_location│ │  description    │             ▼
+│    incident_datetime│ │  collected_by   │   ┌─────────────────┐
+│    description │  │    collected_at     │   │    criminals     │
+│    status      │  └──────────────────────┘   │──────────────────│
+│ FK crime_id    │                              │ PK criminal_id    │
+│    created_at  │                              │    name           │
+└────────────────┘                              │    dob            │
+                                                  │    gender         │
+                                                  │    address        │
+                                                  │    contact        │
+                                                  │    description    │
+                                                  │    status         │
+                                                  └─────────┬──────────┘
+                                                             │
+                                                             ▼
+                                                  ┌─────────────────────┐
+                                                  │      warrants        │
+                                                  │───────────────────────│
+                                                  │ PK warrant_id          │
+                                                  │    warrant_number      │
+                                                  │ FK criminal_id         │
+                                                  │ FK crime_id            │
+                                                  │    issued_by           │
+                                                  │    issued_date         │
+                                                  │    valid_until         │
+                                                  │    reason              │
+                                                  │    status              │
+                                                  │    created_at          │
+                                                  └─────────────────────────┘
+
+┌─────────────────────┐
+│     audit_logs       │   (standalone — tracks system activity)
+│───────────────────────│
+│ PK log_id              │
+│    action               │
+│    details              │
+│    user                 │
+│    created_at           │
+└─────────────────────────┘
+```
 
 The relationships between these entities help maintain consistency and enable efficient retrieval of crime-related information.
 
