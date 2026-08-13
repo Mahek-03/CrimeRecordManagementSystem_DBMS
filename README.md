@@ -12,6 +12,7 @@ A full-stack **Crime Record Management System (CRMS)** built as a DBMS project, 
 The **Crime Record Management System (CRMS)** provides a centralized database for storing and managing crime records. It allows authorized users to add, update, delete, and retrieve information related to crimes, criminals, police officers, complaints, and cases.
 
 The project demonstrates the practical implementation of **DBMS concepts, SQL queries, relational databases, and CRUD operations**.
+
 The system allows authorized users to:
 
 * Track and manage crime records with status (Open/Closed) and assigned officers
@@ -48,6 +49,15 @@ Maintains police officer details and their involvement in investigations.
 Links officers, criminals, and cases to keep track of investigations.
 
 ##  Technologies Used
+
+
+| Layer | Technology |
+|---|---|
+| Frontend | HTML5, CSS3, Vanilla JavaScript |
+| Backend | Node.js, Express.js |
+| Database | MySQL (hosted on Aiven) |
+| Deployment | Render (Web Service) |
+| Config | dotenv (environment variables) |
 
 * **Database:** MySQL / Oracle
 * **Language:** SQL
