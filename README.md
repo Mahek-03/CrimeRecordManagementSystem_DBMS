@@ -157,6 +157,27 @@ Crime-Record-Management-System/
 │   ├── package-lock.json
 └── screenshots/
     └── database-output.png
+
+CRMS_Project/
+│
+├── server.js           # Express server — all backend API routes & DB connection
+├── schema.sql           # Full MySQL database schema (tables + relationships)
+├── package.json          # Node dependencies & start script
+├── .env                 # Local environment variables (DB credentials) — not committed
+├── .gitignore             # Excludes node_modules, .env, logs from git
+│
+├── shared.js             # Shared frontend JS — API base URL, common UI logic
+├── style.css              # Global styling for all pages
+│
+├── index.html             # Command Dashboard — live stats overview
+├── crimes.html             # Crime records — list, add, update, delete
+├── fir.html                # FIR filing & management
+├── criminals.html           # Criminal database & profiles
+├── evidence.html            # Evidence logging linked to crimes
+├── officers.html            # Officer directory & station assignments
+├── predict.html             # Crime trend prediction view
+│
+└── README.md              # Project documentation (this file)
 ```
 
 
