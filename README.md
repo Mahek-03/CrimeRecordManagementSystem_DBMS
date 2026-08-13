@@ -2,33 +2,27 @@
 
 A full-stack **Crime Record Management System (CRMS)** built as a DBMS project, designed to help police departments digitally manage crime records, FIRs, criminal profiles, evidence, officers, and active warrants — all from a single command dashboard.
 
+## Live Demo
+
+🔗 View Project:- https://crimerecordmanagementsystem-dbms.onrender.com/
+
 
 ##  Overview
 
 The **Crime Record Management System (CRMS)** provides a centralized database for storing and managing crime records. It allows authorized users to add, update, delete, and retrieve information related to crimes, criminals, police officers, complaints, and cases.
 
 The project demonstrates the practical implementation of **DBMS concepts, SQL queries, relational databases, and CRUD operations**.
+The system allows authorized users to:
 
-
-## Live Demo
-
-🔗 View Project:- https://crimerecordmanagementsystem-dbms.onrender.com/
-
-
-##  Features
-* Command Dashboard – real-time stats: total crimes, open cases, FIRs filed, cases closed, criminals in custody, active warrants, evidence count
-* Crime Records Management – add, view, update, and delete crime records with status tracking (Open/Closed)
-* FIR Filing System – file and manage First Information Reports with complainant details
-* Criminal Database – maintain criminal profiles with custody status (At Large / In Custody)
-* Evidence Tracking – log and manage evidence items linked to specific crimes
-* Officer Management – directory of officers with station assignments and duty status
-* Warrant Management – issue and revoke arrest warrants
-* Crime Heatmap – visual view of crime hotspots by location
-* Crime Prediction – basic trend-based crime prediction
-*  Logs – tracks system activity for accountability
-* REST API Backend – Express.js + MySQL powering all modules
-* Cloud Deployed – live on Render with a cloud-hosted MySQL (Aiven) database
-
+* Track and manage crime records with status (Open/Closed) and assigned officers
+* File and manage First Information Reports (FIRs)
+* Maintain a criminal database with status tracking (At Large / In Custody)
+* Log and manage evidence linked to crimes
+* Manage police officers and their station assignments
+* Issue and track arrest warrants
+* View crime hotspots via an officer heatmap
+* Get basic crime trend predictions
+* Maintain a full audit log of system activity
 
 
 ##  Main Modules
