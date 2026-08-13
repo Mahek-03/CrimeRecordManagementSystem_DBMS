@@ -139,9 +139,10 @@ Crime-Record-Management-System/
 ├── README.md
 │
 ├── database/
-│   ├── schema.sql
+│   ├── schema.sqll           # MySQL database schema
 │
 ├── frontend/
+│   ├── style.css
 │   ├── index.html
 │   ├── crimes.html
 │   ├── crimes.html
@@ -151,33 +152,16 @@ Crime-Record-Management-System/
 │   └── predicts.html
 │
 ├── backend/
-│   ├── server.js
+│   ├── server.js           # Express server — all backend API routes & DB connection
 │   ├── shared.js
-│   ├── package.json
+│   ├── package.json          # Node dependencies & start script
 │   ├── package-lock.json
-└── screenshots/
-    └── database-output.png
+│   ├── .gitginore
+│   ├── settings.json
+│   └── .env                 # Local environment variables
+│ 
+└── node_modules/
 
-CRMS_Project/
-│
-├── server.js           # Express server — all backend API routes & DB connection
-├── schema.sql           # Full MySQL database schema (tables + relationships)
-├── package.json          # Node dependencies & start script
-├── .env                 # Local environment variables (DB credentials) — not committed
-├── .gitignore             # Excludes node_modules, .env, logs from git
-│
-├── shared.js             # Shared frontend JS — API base URL, common UI logic
-├── style.css              # Global styling for all pages
-│
-├── index.html             # Command Dashboard — live stats overview
-├── crimes.html             # Crime records — list, add, update, delete
-├── fir.html                # FIR filing & management
-├── criminals.html           # Criminal database & profiles
-├── evidence.html            # Evidence logging linked to crimes
-├── officers.html            # Officer directory & station assignments
-├── predict.html             # Crime trend prediction view
-│
-└── README.md              # Project documentation (this file)
 ```
 
 
