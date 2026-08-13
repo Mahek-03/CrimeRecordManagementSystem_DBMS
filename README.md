@@ -93,14 +93,14 @@ The relationships between these entities help maintain consistency and enable ef
 ### 1. Clone the Repository
 
 ```bash
-git clone https://github.com/your-username/crime-record-management-system.git
+git clone https://github.com/Mahek-03/CrimeRecordManagementSystem_DBMS.git
 ```
 
 ### 2. Open the Project
 
 Open the SQL files using your preferred database management tool such as:
 
-* MySQL Workbench
+* MySQL Workbench 
 * Oracle SQL Developer
 
 ### 3. Create the Database
@@ -108,7 +108,7 @@ Open the SQL files using your preferred database management tool such as:
 Run the database creation/schema SQL file.
 
 ```sql
-CREATE DATABASE CRMS;
+CREATE DATABASE crms_db;
 ```
 
 > If you are using Oracle, create the required schema/tables according to the provided SQL files instead.
