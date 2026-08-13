@@ -156,63 +156,83 @@ The system consists of multiple interconnected tables such as:
 The relationships between these entities help maintain consistency and enable efficient retrieval of crime-related information.
 
 
-## Database Schema 
-The database (crms_db) consists of the following core tables, connected via foreign keys:
-
-police_stations — station details
-officers — linked to police_stations
-criminals — criminal profiles and custody status
-crimes — linked to police_stations
-fir — First Information Reports
-crime_criminal — junction table linking crimes to criminals
-evidence — items linked to crimes
-warrants — arrest warrants linked to criminals
-audit_logs — system activity log
-
 Run schema.sql against your MySQL instance to set up the full database structure.
+
 
 ## ⚙️ Setup & Installation
 
-### 1. Clone the Repository
+### Prerequisites
+- [Node.js](https://nodejs.org/) (v18+ recommended)
+- MySQL Server (local or cloud, e.g. [Aiven](https://aiven.io))
 
+### 1. Clone the repository
 ```bash
 git clone https://github.com/Mahek-03/CrimeRecordManagementSystem_DBMS.git
+cd CrimeRecordManagementSystem_DBMS
 ```
 
-### 2. Open the Project
-
-Open the SQL files using your preferred database management tool such as:
-
-* MySQL Workbench 
-* Oracle SQL Developer
-
-### 3. Create the Database
-
-Run the database creation/schema SQL file.
-
-```sql
-CREATE DATABASE crms_db;
+### 2. Install dependencies
+```bash
+npm install
 ```
 
-> If you are using Oracle, create the required schema/tables according to the provided SQL files instead.
-
-### 4. Create Tables
-
-Execute the table creation scripts to create all required tables and relationships.
-
-### 5. Insert Sample Data
-
-Run the provided INSERT queries to populate the database with sample records.
-
-### 6. Execute Queries
-
-Run the provided SQL queries to perform operations such as:
-
-```sql
-SELECT * FROM Criminal;
+### 3. Set up environment variables
+Create a `.env` file in the project root:
+```
+DB_HOST=localhost
+DB_PORT=3306
+DB_USER=root
+DB_PASSWORD=your_password
+DB_NAME=crms_db
+DB_SSL=false
+PORT=3000
 ```
 
-You can then perform searching, updating, deleting, joining, and other database operations.
+### 4. Import the database schema
+```bash
+mysql -u root -p < schema.sql
+```
+
+### 5. Start the server
+```bash
+npm start
+```
+
+Visit **http://localhost:3000** in your browser.
+
+---
+
+## 🌐 Deployment
+
+This project is deployed on **Render** as a Node.js Web Service, connected to a **MySQL database hosted on Aiven** (since Render's free tier only offers PostgreSQL natively).
+
+Environment variables (`DB_HOST`, `DB_PORT`, `DB_USER`, `DB_PASSWORD`, `DB_NAME`, `DB_SSL`) are configured directly in the Render dashboard rather than committed to the repository.
+
+---
+
+## 📡 API Overview
+
+| Endpoint | Method | Description |
+|---|---|---|
+| `/api/stats` | GET | Dashboard summary statistics |
+| `/api/stats/by-type` | GET | Crime breakdown by type |
+| `/api/dashboard/recent` | GET | Recently reported crimes |
+| `/api/crimes` | GET / POST | List / add crime records |
+| `/api/crimes/:id` | GET / PUT / DELETE | View / update / delete a crime |
+| `/api/fir` | GET / POST | List / file FIRs |
+| `/api/fir/:id` | DELETE | Delete an FIR |
+| `/api/criminals` | GET / POST | List / add criminal profiles |
+| `/api/criminals/:id` | DELETE | Remove a criminal record |
+| `/api/officers` | GET | List officers |
+| `/api/evidence` | GET / POST | List / log evidence |
+| `/api/evidence/:id` | DELETE | Remove evidence |
+| `/api/warrants` | GET / POST | List / issue warrants |
+| `/api/warrants/:id/revoke` | PUT | Revoke a warrant |
+| `/api/predict` | GET | Basic crime trend prediction |
+| `/api/heatmap` | GET | Officer/crime heatmap data |
+| `/api/logs` | GET / POST | View / add audit logs |
+
+---
 
 ## 📁 Project Structure
 
@@ -267,6 +287,16 @@ Crime-Record-Management-System/
 * Introduce advanced search and filtering.
 * Deploy the system as a cloud-based application.
 
+## 👩‍💻 Author
+
+**Mahek** — DBMS Project, Crime Record Management System
+
+---
+
+## 📄 License
+
+This project is for academic purposes as part of a DBMS coursework submission.
+
 ## Author
 
 **Mahek Chaurasia**
@@ -274,4 +304,5 @@ Crime-Record-Management-System/
 Computer Science Engineering Student
 
 ---
+
 
