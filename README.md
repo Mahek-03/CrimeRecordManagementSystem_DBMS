@@ -4,7 +4,7 @@ A full-stack **Crime Record Management System (CRMS)** built as a DBMS project, 
 
 ## Live Demo
 
-🔗 View Project:- https://crimerecordmanagementsystem-dbms.onrender.com/
+🔗 View Project :- https://crimerecordmanagementsystem-dbms.onrender.com/
 
 ---
 
